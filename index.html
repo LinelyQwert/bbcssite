@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="tailwind-full.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" class="relative flex min-h-screen flex-col justify-center overflow-hidden py-6 bg-gradient-to-tl to-red-200 from-green-100">
+        <div class="relative bg-gray-50 shadow-2xl ring-1 ring-gray-900/5 max-w-sm mx-auto rounded-lg w-full">
+            <img class="h-10 w-full object-fill" src="banner.png">
+            <div class="px-6 pb-8">
+                <div class="mx-auto max-w-xl px-2">                    
+                    <div class="font-mono">
+                        <h1 class="font-bold text-2xl mb-3">Sign in</h1>
+                        <form>
+                            <input type="email" placeholder="Email" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                            <br>
+                            <input type="password" placeholder="Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                            <p class="mb-3">No account? <a href="signup.html" class="text-blue-400 underline hover:text-blue-900">Create one!</a></p>
+                            <div class="flex ml-auto">
+                                <input type="submit" class="hover:bg-blue-900 bg-blue-500 text-white px-3 rounded-lg">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
