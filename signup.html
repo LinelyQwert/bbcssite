@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="182185794726-v6fmu5lstm49qsrch6sjaj7tgot71qof.apps.googleusercontent.com">
     <link href="tailwind-full.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -14,13 +15,13 @@
                 <div class="mx-auto max-w-xl px-2">                    
                     <div class="font-mono">
                         <h1 class="font-bold text-2xl mb-3">Sign up</h1>
-                        <form>
-                            <input type="email" placeholder="Email" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                        <form id="signup">
+                            <input type="email" name="email" placeholder="Email" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
                             <br>
-                            <input type="password" placeholder="Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
-                            <input type="password" placeholder="Confirm Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                            <input minlength="8" id="pwd" type="password" name="password" placeholder="Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                            <input minlength="8" type="password" name="confirmation" placeholder="Confirm Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
                             <div class="flex ml-auto">
-                                <input type="submit" class="hover:bg-blue-900 bg-blue-500 text-white px-3 rounded-lg">
+                                <input id="submit" onclick="mySubmit(this)" type="submit" class="hover:bg-blue-900 bg-blue-500 text-white px-3 rounded-lg">
                             </div>
                         </form>
                     </div>
@@ -29,4 +30,7 @@
         </div>
     </div>
 </body>
+<script src="signup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </html>

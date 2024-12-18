@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="182185794726-v6fmu5lstm49qsrch6sjaj7tgot71qof.apps.googleusercontent.com">
     <link href="tailwind-full.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -14,19 +15,24 @@
                 <div class="mx-auto max-w-xl px-2">                    
                     <div class="font-mono">
                         <h1 class="font-bold text-2xl mb-3">Sign in</h1>
-                        <form>
-                            <input type="email" placeholder="Email" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                        <form id="login" method="get">
+                            <input type="email" placeholder="Email" name="email" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
                             <br>
-                            <input type="password" placeholder="Password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
+                            <input type="password" placeholder="Password" name="password" size="32" class="border-b-4 border-gray-300 bg-gray-50 mb-3" required>
                             <p class="mb-3">No account? <a href="signup.html" class="text-blue-400 underline hover:text-blue-900">Create one!</a></p>
                             <div class="flex ml-auto">
                                 <input type="submit" class="hover:bg-blue-900 bg-blue-500 text-white px-3 rounded-lg">
                             </div>
                         </form>
+                        <br>
+                        <h1 class="font-bold text-md mb-3">Alternatively, sign in with Google</h1>
+                        <div class="g-signin2" data-width="auto" data-longtitle="true" data-theme="dark" data-onsuccess="onSignIn"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="login.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 </html>
